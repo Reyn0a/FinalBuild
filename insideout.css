@@ -1,1 +1,139 @@
+$color-background: #010D47;
+$color-background-light: #3179EF;
+$color-text: #9ec0f9;
+$color-accent: #fce80e;
+
+$color-rail-top: #CD5E40;
+$color-rail-bottom: #C15028;
+$color-rail-lip: #F68249;
+
+$color-joy-dark: #EA9600;
+$color-joy-light: #FEE800;
+$color-joy-bright: #FEF9A2;
+
+$color-fear-dark: #7B0398;
+$color-fear-light: #ED7DE1;
+$color-fear-bright: #FFD4FC;
+
+$color-disgust-dark: #01A802;
+$color-disgust-light: #87E845;
+$color-disgust-bright: #C4F4A9;
+
+$color-anger-dark: #F40910;
+$color-anger-light: #FF530F;
+$color-anger-bright: #FCCE4A;
+
+$color-sadness-dark: #1F4081;
+$color-sadness-light: #4F80C2;
+$color-sadness-bright: #A2DDEF;
+html {
+    background: $color-background;
+    color: $color-text;
+    padding: 1em;
+    text-align: center;
+}
+
+.marbles {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: .5em 1em;
+    position: relative;
+}
+
+.marbles::after {
+    background-image: linear-gradient($color-rail-top, $color-rail-bottom);
+    border-bottom: 3px solid $color-rail-lip;
+    border-radius: .25em;
+    bottom: 0;
+    box-shadow: 0 .25em .35em rgba(0, 0, 0, .75);
+    content: "";
+    display: block;
+    height: 1em;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.marble {
+    display: inline-block;
+}
+
+.marble + .marble {
+    margin-left: -.2em;
+}
+
+.marble--link {
+    background-image: radial-gradient($color-background-light, $color-background);
+    border: 2px solid $color-background-light;
+    border-radius: 100%;
+    box-shadow: 0 0 .5em rgba(255, 255, 255, .75);
+    display: inline-block;
+    height: 3em;
+    position: relative;
+    text-indent: -9999em;
+    width: 3em;
+}
+
+.marble--link::after {
+    background-image: radial-gradient(lighten($color-background-light, 10%), lighten($color-background, 10%));
+    border-radius: 100%;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: opacity 200ms ease-out;
+    top: 0;
+}
+
+.marble--link:hover::after {
+    opacity: 1;
+}
+
+.marble--joy {
+    background-image: radial-gradient($color-joy-bright, $color-joy-light, $color-joy-dark);
+    border-color: $color-joy-bright;
+}
+
+.marble--joy::after {
+    background-image: radial-gradient($color-joy-bright, $color-joy-light);
+}
+
+.marble--anger {
+    background-image: radial-gradient($color-anger-bright, $color-anger-light, $color-anger-dark);
+    border-color: $color-anger-bright;
+}
+
+.marble--anger::after {
+    background-image: radial-gradient($color-anger-bright, $color-anger-light);
+}
+
+.marble--disgust {
+    background-image: radial-gradient($color-disgust-bright, $color-disgust-light, $color-disgust-dark);
+    border-color: $color-disgust-bright;
+}
+
+.marble--disgust::after {
+    background-image: radial-gradient($color-disgust-bright, $color-disgust-light);
+}
+
+.marble--fear {
+    background-image: radial-gradient($color-fear-bright, $color-fear-light, $color-fear-dark);
+    border-color: $color-fear-bright;
+}
+
+.marble--fear::after {
+    background-image: radial-gradient($color-fear-bright, $color-fear-light);
+}
+
+.marble--sadness {
+    background-image: radial-gradient($color-sadness-bright, $color-sadness-light, $color-sadness-dark);
+    border-color: $color-sadness-bright;
+}
+
+.marble--sadness::after {
+    background-image: radial-gradient($color-sadness-bright, $color-sadness-light);
+}
 
