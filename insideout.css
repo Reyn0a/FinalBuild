@@ -15,17 +15,10 @@ $color-fear-dark: #7B0398;
 $color-fear-light: #ED7DE1;
 $color-fear-bright: #FFD4FC;
 
-$color-disgust-dark: #01A802;
-$color-disgust-light: #87E845;
-$color-disgust-bright: #C4F4A9;
-
 $color-anger-dark: #F40910;
 $color-anger-light: #FF530F;
 $color-anger-bright: #FCCE4A;
 
-$color-sadness-dark: #1F4081;
-$color-sadness-light: #4F80C2;
-$color-sadness-bright: #A2DDEF;
 html {
     background: $color-background;
     color: $color-text;
@@ -110,15 +103,6 @@ html {
     background-image: radial-gradient($color-anger-bright, $color-anger-light);
 }
 
-.marble--disgust {
-    background-image: radial-gradient($color-disgust-bright, $color-disgust-light, $color-disgust-dark);
-    border-color: $color-disgust-bright;
-}
-
-.marble--disgust::after {
-    background-image: radial-gradient($color-disgust-bright, $color-disgust-light);
-}
-
 .marble--fear {
     background-image: radial-gradient($color-fear-bright, $color-fear-light, $color-fear-dark);
     border-color: $color-fear-bright;
@@ -126,14 +110,5 @@ html {
 
 .marble--fear::after {
     background-image: radial-gradient($color-fear-bright, $color-fear-light);
-}
-
-.marble--sadness {
-    background-image: radial-gradient($color-sadness-bright, $color-sadness-light, $color-sadness-dark);
-    border-color: $color-sadness-bright;
-}
-
-.marble--sadness::after {
-    background-image: radial-gradient($color-sadness-bright, $color-sadness-light);
 }
 
